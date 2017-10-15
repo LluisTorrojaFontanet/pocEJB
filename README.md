@@ -2,12 +2,14 @@
 
 EJB Proof of concept
 
-Related technologies:
+<UL>
 
-<lu>
-  <li>wildlfy 9.0.2</i>
-  <li>eclipse Neon 3</i>
-  <li>Java SE 8</i>
-  <li>Java EE 7</i>
-  <li>EJB 3.1</i>
-</lu>
+ <LH>Related technologies:</LH>
+
+ <LI>wildlfy 9.0.2</LI>
+ <LI>eclipse Neon 3</LI>
+ <LI>Java SE 8</LI>
+ <LI>Java EE 7</LI>
+ <LI>EJB 3.1</LI>
+
+</UL>
