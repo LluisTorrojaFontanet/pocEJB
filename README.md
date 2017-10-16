@@ -2,14 +2,14 @@
 
 EJB Proof of concept
 
-<UL>
+Related technologies:
+* wildlfy 9.0.2
+* eclipse Neon 3
+* Java SE 8
+* Java EE 7
+* EJB 3.1
 
- <LH>Related technologies:</LH>
+Howto start wildfy
 
- <LI>wildlfy 9.0.2</LI>
- <LI>eclipse Neon 3</LI>
- <LI>Java SE 8</LI>
- <LI>Java EE 7</LI>
- <LI>EJB 3.1</LI>
-
-</UL>
+cd $WILLFY_HOME
+./bin/standalone.sh -b hostname --debug 8989
