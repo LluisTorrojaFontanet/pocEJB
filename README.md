@@ -9,7 +9,7 @@ Related technologies:
 * Java EE 7
 * EJB 3.1
 
-Howto start wildfy
+How to start wildfy
 
 cd $WILLFY_HOME
 ./bin/standalone.sh -b hostname --debug 8989
