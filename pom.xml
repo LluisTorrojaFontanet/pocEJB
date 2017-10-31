@@ -4,11 +4,19 @@
 	<groupId>cat.poc</groupId>
 	<artifactId>pocEJB</artifactId>
 	<version>0.1.0</version>
+	<packaging>ejb</packaging>
+	<name>pocEJB</name>
+	<description>Sample EJB project</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		
+		<version.compiler.target>1.8</version.compiler.target>
+		<version.compiler.source>1.8</version.compiler.source>
+		<version-compiler-plugin>3.7.0</version-compiler-plugin>
+		
+		<version.ejb.plugin>3.0.0</version.ejb.plugin>
+		<version.ejb.ejbVersion>3.2</version.ejb.ejbVersion>
 	</properties>
 
 	<dependencies>
@@ -24,13 +32,25 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>${version-compiler-plugin}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${version.compiler.source}</source>
+					<target>${version.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>${version.ejb.plugin}</version>
+				<configuration>
+					<ejbVersion>${version.ejb.ejbVersion}</ejbVersion>
+					<generateClient>true</generateClient>
+					<clientIncludes>
+						<clientInclude>cat/poc/*Remote.class</clientInclude>
+					</clientIncludes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

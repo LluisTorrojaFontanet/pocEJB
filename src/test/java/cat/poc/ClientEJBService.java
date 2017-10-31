@@ -26,13 +26,13 @@ public class ClientEJBService {
 	}
 
 	/**
-	 * Looks up and returns the proxy to remote stateless calculator bean
+	 * Looks up and returns the proxy to remote stateless ejb bean
 	 *
 	 * @return
 	 * @throws NamingException
 	 */
 	private static EJBServiceRemote lookupRemoteStatelessPocEJB() throws NamingException {
-		final Hashtable jndiProperties = new Hashtable();
+		final Hashtable<String, String> jndiProperties = new Hashtable<String, String>();
 		jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
 		final Context context = new InitialContext(jndiProperties);
 		// The app name is the application name of the deployed EJBs. This is
